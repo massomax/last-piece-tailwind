@@ -11,13 +11,8 @@ export default function App() {
       transition-colors duration-300
     ">
       <Header />
-
-      {/* основной контейнер, фон тот же, что и у ProductList */}
-      <main className="flex-1 overflow-auto bg-background">
-        {/* центрируем контент и ограничиваем ширину */}
-        <div className="max-w-md mx-auto">
-          <ProductList />
-        </div>
+      <main className="flex-1 overflow-auto bg-background w-full sm:max-w-[540px] sm:mx-auto px-6  sm:px-4">
+        <ProductList />
       </main>
 
       <footer className="p-4 bg-background-secondary text-text-secondary text-center">
