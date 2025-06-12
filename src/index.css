@@ -6,7 +6,7 @@
 
 /* 3) Объявляем дизайн-токены (светлая тема) */
 @theme {
-  --color-primary: #3390ec;
+  --color-primary: #c4c9cc;
   --color-background: #ffffff;
   --color-background-secondary: #f4f4f5;
   --color-text: #000000;
@@ -17,7 +17,7 @@
 /* 4) Внутри @layer base и @variant dark задаём тёмные значения тех же токенов */
 @layer base {
   @variant dark {
-    --color-primary: #3390ec;
+    --color-primary: #5a5d60;
     --color-background: #1e1e1e;
     --color-background-secondary: #2b2b2d;
     --color-text: #ffffff;
@@ -30,4 +30,5 @@
 body {
   background-color: var(--color-background);
   color: var(--color-text);
+  color-scheme: #5a5d60;
 }
