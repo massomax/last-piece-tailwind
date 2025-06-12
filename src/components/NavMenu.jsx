@@ -5,7 +5,7 @@ export function NavMenu() {
     <nav
       className="
       fixed bottom-0 left-0 right-0 h-16
-      bg-background-secondary dark:bg-gray-800
+     bg-primary
       border-t border-gray-300 dark:border-gray-700
       flex justify-around items-center z-10
     ">
