@@ -4,7 +4,8 @@ export function ProductList() {
   const products = Array.from({ length: 10 }, (_, i) => ({
     id: i + 1,
     title: `Товар ${i + 1}`,
-    image: "https://via.placeholder.com/300x200?text=Фото",
+    image:
+      "https://avatars.mds.yandex.net/i?id=4382302ee7a44c18f847d7094c9b247f_l-5221486-images-thumbs&n=13",
     newPrice: "1 200 ₽",
     oldPrice: "1 500 ₽",
   }));
