@@ -8,7 +8,12 @@ export const Header = () => {
   }, [dark]);
 
   return (
-    <header className="p-6 bg-primary text-white">
+    <header
+      className="p-5
+    bg-background-secondary dark:bg-background-secondary-dark
+    shadow-[0_2px_4px_rgba(0,0,0,0.1)]
+    dark:shadow-[0_2px_4px_rgba(0,0,0,0.5)]
+    z-10">
       <div className="flex text-text">
         <h1 className="text-2xl font-semibold flex-2/3 flex justify-center self-center">
           Последняя штучка
