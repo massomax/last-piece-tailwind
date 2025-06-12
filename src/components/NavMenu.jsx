@@ -10,17 +10,17 @@ export function NavMenu() {
       flex justify-around items-center z-10
     ">
       {/* Все товары */}
-      <button className="flex flex-col items-center text-gray-500 dark:text-gray-300 hover:text-primary">
+      <button className="flex flex-col items-center text-text">
         <HomeIcon className="h-6 w-6" />
       </button>
 
       {/* Категории */}
-      <button className="flex flex-col items-center text-gray-500 dark:text-gray-300 hover:text-primary">
+      <button className="flex flex-col items-center text-text">
         <Squares2X2Icon className="h-6 w-6" />
       </button>
 
       {/* Избранное */}
-      <button className="flex flex-col items-center text-gray-500 dark:text-gray-300 hover:text-primary">
+      <button className="flex flex-col items-center text-text">
         <HeartIcon className="h-6 w-6" />
       </button>
     </nav>

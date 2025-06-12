@@ -9,7 +9,7 @@ export const Header = () => {
 
   return (
     <header className="p-6 bg-primary text-white">
-      <div className="flex text-text-secondary">
+      <div className="flex text-text">
         <h1 className="text-2xl font-semibold flex-2/3 flex justify-center self-center">
           Последняя штучка
         </h1>
