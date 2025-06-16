@@ -33,5 +33,5 @@
 body {
   background-color: var(--color-background);
   color: var(--color-text);
-  color-scheme: #5a5d60;
+  color-scheme: light dark;
 }
