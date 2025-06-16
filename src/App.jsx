@@ -6,6 +6,7 @@ import { ProductList } from "./components/ProductsList";
 import { CategoryList } from "./components/CategoryList";
 import { CategoryProducts } from "./components/CategoryProduct";
 import { Favorites } from "./components/Favorites";
+import { ProductDetails } from "./components/ProductDetails";
 
 export default function App() {
   return (
@@ -17,7 +18,7 @@ export default function App() {
       transition-colors duration-300
     ">
         <Header />
-        <main className="flex-1 overflow-auto bg-background w-full sm:max-w-[540px] sm:mx-auto px-5  sm:px-4">
+        <main className="flex-1 overflow-auto bg-background w-full sm:max-w-[540px] sm:mx-auto px-0  sm:px-0 pb-16">
           <Routes>
             <Route path="/" element={<ProductList />} />
             <Route path="/categories" element={<CategoryList />} />
@@ -25,6 +26,7 @@ export default function App() {
               path="/categories/:categoryName"
               element={<CategoryProducts />}
             />
+            <Route path="/product/:id" element={<ProductDetails />} />
             <Route path="/favorites" element={<Favorites />} />
           </Routes>
         </main>

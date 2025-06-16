@@ -23,7 +23,7 @@ export function Favorites() {
 
   return (
     <div className="p-4">
-      <h2 className="text-xl font-semibold mb-4">Избранное</h2>
+      <h2 className="text-2xl font-bold mb-4 text-center">Избранное</h2>
       {filtered.length > 0 ? (
         <ProductList items={filtered} />
       ) : (

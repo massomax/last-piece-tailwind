@@ -1,8 +1,8 @@
 import { products } from "./product";
 import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import { HeartIcon as SolidHeart } from "@heroicons/react/24/solid";
 import { HeartIcon as OutlineHeart } from "@heroicons/react/24/outline";
-import { ProductModal } from "./ProductModal";
 
 const STORAGE_KEY = "myapp:favorites";
 
@@ -40,7 +40,7 @@ export function ProductList({ items }) {
 
   return (
     <>
-      <div className="grid grid-cols-2 max-h-full gap-6 mt-5 overflow-hidden">
+      <div className="grid grid-cols-2 max-h-full gap-6 mt-5 overflow-hidden mx-3">
         {list.map((product) => {
           const isFav = favorites.has(product.id);
           return (
@@ -62,18 +62,20 @@ export function ProductList({ items }) {
                 )}
               </button>
 
-              <div className="w-full aspect-[3/4]">
+              <Link
+                to={`/product/${product.id}`}
+                className="w-full aspect-[3/4]">
                 <img
-                  src={product.image}
+                  src={product.images[ product.id % product.images.length ]}
                   alt={product.title}
                   className="w-full h-full object-cover rounded-3xl"
                 />
-              </div>
+              </Link>
               <div className="p-1 flex-1 flex flex-col text-left">
-                <h3 className="text-base font-medium text-text mb-2 line-clamp-2">
+                <h3 className="text-2xl font-medium text-text mb-2 line-clamp-2">
                   {product.title}
                 </h3>
-                <div className="text-md mb-4">
+                <div className="text-xl mb-4">
                   <span
                     className={
                       product.topPrice
@@ -91,13 +93,6 @@ export function ProductList({ items }) {
           );
         })}
       </div>
-
-      {selectedProduct && (
-        <ProductModal
-          product={selectedProduct}
-          onClose={() => setSelectedProduct(null)}
-        />
-      )}
     </>
   );
 }
