@@ -153,7 +153,7 @@ export function SellerProductForm() {
     try {
       if (isEdit) await updateProduct(id, payload);
       else await createProduct(payload);
-      navigate("/seller/products", { replace: true });
+      navigate("/seller", { replace: true });
     } catch (err) {
       setErrors({ form: err.message });
     } finally {
