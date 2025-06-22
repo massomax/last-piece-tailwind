@@ -1,12 +1,11 @@
 // components/ProductDetails.jsx
 import { useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
-import { products as allProducts } from "./product";
-
-import { BackAndFavorite } from "../components/ProductsDetalis/BackAndFavorite";
-import { ImageCarousel } from "../components/ProductsDetalis/ImageCarousel";
-import { ProductInfo } from "../components/ProductsDetalis/ProductInfo";
-import { SellerButton } from "../components/ProductsDetalis/SellerButton";
+import { initialProducts as allProducts } from "../api/sellerApi";
+import { BackAndFavorite } from "./ProductDetails/BackAndFavorite";
+import { ImageCarousel } from "./ProductDetails/ImageCarousel";
+import { ProductInfo } from "./ProductDetails/ProductInfo";
+import { SellerButton } from "./ProductDetails/SellerButton";
 
 const STORAGE_KEY = "myapp:favorites";
 

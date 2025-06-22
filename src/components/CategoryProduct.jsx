@@ -1,5 +1,5 @@
 import { useParams } from "react-router-dom";
-import { products } from "./product";
+import { initialProducts as products } from "../api/sellerApi";
 import { ProductList } from "./ProductsList";
 
 export function CategoryProducts() {

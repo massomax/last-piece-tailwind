@@ -1,12 +1,33 @@
 import { Link } from "react-router-dom";
-import { categories } from "./product";
+// import { categories } from "./product";
+import { useState, useEffect } from "react";
+import { getCategories } from "../api/sellerApi";
 
 export function CategoryList() {
+  const [categories, setCategories] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
+
+  useEffect(() => {
+    getCategories()
+      .then((list) => setCategories(list))
+      .catch((err) => setError(err.message || "Не удалось загрузить категории"))
+      .finally(() => setLoading(false));
+  }, []);
+
+  if (loading) {
+    return <p className="p-4 text-center">Загрузка категорий…</p>;
+  }
+
+  if (error) {
+    return <p className="p-4 text-center text-red-500">{error}</p>;
+  }
+
   return (
     <div className="flex flex-1 flex-col gap-3 py-5">
-      {categories.map(({ id, category }) => (
+      {categories.map((category) => (
         <Link
-          key={id}
+          key={category.id}
           to={`/categories/${encodeURIComponent(category)}`}
           className="
             flex items-center
